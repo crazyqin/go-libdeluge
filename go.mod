@@ -1,4 +1,4 @@
-module github.com/gdm85/go-libdeluge
+module github.com/crazyq/go-libdeluge
 
 go 1.17
 
