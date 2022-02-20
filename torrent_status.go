@@ -51,7 +51,7 @@ type TorrentStatus struct {
 	TrackerHost         string
 	TrackerStatus       string
 	UploadPayloadRate   int64
-	AllTimeUpload       int64
+	TotalUploaded       int64
 	Files               []File
 	Peers               []Peer
 	FilePriorities      []int64
@@ -110,7 +110,7 @@ var statusKeys = rencode.NewList(
 	"completed_time",    // v2-only
 	"download_location", // v2-only
 	"private",
-	"all_time_upload")
+	"total_uploaded")
 
 // TorrentStatus returns the status of the torrent with specified hash.
 func (c *Client) TorrentStatus(hash string) (*TorrentStatus, error) {
